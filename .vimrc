@@ -6,6 +6,13 @@ function! SetProjectRoot()
   endif
 endfunction
 
+function! CheckLongLines(cols)
+  if has("gui_running")
+    highlight OverLength guifg=darkred 
+    execute 'match OverLength /\%'.a:cols.'v.\+/'
+  endif
+endfunction
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -23,7 +30,7 @@ filetype plugin indent on    " required
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set expandtab autoindent tabstop=2 shiftwidth=2 number
-set clipboard=unnamedplus
+set clipboard=unnamedplus switchbuf+=newtab
 set wildmenu
 set laststatus=2
 syntax on
