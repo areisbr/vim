@@ -51,7 +51,7 @@ if has("gui_running")
   highlight Visual guibg=#505050
   highlight Type guifg=#ffff76
   highlight WildMenu guifg=black
-  set guioptions=aegirLt
+  set guioptions=agit
   set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
   set guifont=Cousine\ for\ Powerline:h16
   "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 12 
