@@ -24,11 +24,14 @@ Plugin 'majutsushi/tagbar'
 Plugin 'quanganhdo/grb256.git'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+if !(has("win32") || has("win64"))
+  let g:airline_powerline_fonts = 1
+endif
 set expandtab autoindent tabstop=2 shiftwidth=2 number
 set clipboard=unnamedplus switchbuf+=newtab
 set wildmenu
@@ -53,7 +56,11 @@ if has("gui_running")
   highlight WildMenu guifg=black
   set guioptions=agit
   set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
-  set guifont=Cousine\ for\ Powerline:h16
+  if has("win32") || has("win64")
+    set guifont=Consolas:h12
+  else
+    set guifont=Cousine\ for\ Powerline:h16
+  endif
   "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 12 
   "set guifont=Inconsolata\ for\ Powerline\ 16 
   "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
