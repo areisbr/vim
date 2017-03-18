@@ -29,4 +29,4 @@ filetype plugin indent on    " required
 <pre>
 :PluginInstall!
 </pre>
-6. Now you can pick up whatever you want from my gVim configuration from  [here](https://github.com/areisbr/vim/blob/master/.vimrc). Just paste the contents into your _\_vimrc_ file and __remember to update paths__ as it may differ from mine.
+6. Now you can pick up whatever you want from my gVim configuration from  [here](https://github.com/areisbr/vim/blob/master/.vimrc). Just paste the contents into your _\_vimrc_ file and __remember to update paths__ as they may differ from mine.
